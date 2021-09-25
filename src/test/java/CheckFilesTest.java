@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-
 import static com.codeborne.pdftest.assertj.Assertions.assertThat;
 
 public class CheckFilesTest {
