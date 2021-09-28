@@ -47,8 +47,11 @@ public class CheckFilesTest {
 
         if (zipFile.isEncrypted())
             zipFile.setPassword(passwordFromZipFile);
-
        zipFile.extractAll(pathToExtractFilesFromZip);
+
+       var pdfFilePath = new File(String.format("%s/FileInZIp.pdf", pathToExtractFilesFromZip));
+       var pdfFile = new PDF(pdfFilePath);
+       assertThat(pdfFile.text).contains("PDF Test File");
     }
 
 }
